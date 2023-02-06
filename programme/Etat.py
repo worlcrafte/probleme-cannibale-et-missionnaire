@@ -27,7 +27,8 @@ class Etat:
     def __eq__(self, other):
         if isinstance(other, Etat):
             return self.nbCg == other.nbCg and self.nbMg == other.nbMg and self.boatPosition == other.boatPosition
-        return False
+        else:
+            super()
 
     def noneParent(self):
         super()
