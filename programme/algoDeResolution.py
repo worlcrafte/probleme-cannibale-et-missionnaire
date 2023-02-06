@@ -3,7 +3,7 @@ from Etat import Etat
 # regle permet de verifier que l'état calculer respecte bien les règles établis : qu'il n'y ai pas plus de Canibale que de mercenaire sur un côté de la rive (sauf s'il n'y a aucun mercenaire alors il n'y a aucun risque pour eux)
 
 
-def regle(etat, n, ajout, ajout2):
+def rule(etat, n, ajout, ajout2):
     if 0 <= etat.get_nbMg()+ajout <= n and 0 <= etat.get_nbCg()+ajout2 <= n:
         return ((((etat.get_nbMg() + ajout) >= (etat.get_nbCg() + ajout2)) or
                  (etat.get_nbMg()+ajout) == 0) and
@@ -12,13 +12,16 @@ def regle(etat, n, ajout, ajout2):
     else:
         return False
 
+# expance permet d'expancer l'état courant. Il prend en entrée l'état courant, la capacité maximale du tableau, et le nombre total de mercerniares et cannibales (ici uniquement n car c 2 valeurs sont égaux ). Il retournera une liste contenant tous les états trouver par le programme respectant les règles établis.
+
 
 def expance(etat, p, n):
     result = []
     for mEmbarque in range(0, p+1):
         for cEmbarque in range((0, 1)[mEmbarque == 0], (1, p-mEmbarque+1)[p-mEmbarque+1 > 0]):
             if (not etat.get_boatPosition()):
-                if regle(etat, n, mEmbarque, cEmbarque):
+                # il es possible aussi de créer 2 variables temporaires et de modifier les informations contenus (+ ou - mais cela revient au même)
+                if rule(etat, n, mEmbarque, cEmbarque):
                     result.append(Etat(
                         etat.get_nbMg()+mEmbarque,
                         etat.get_nbCg()+cEmbarque,
@@ -27,7 +30,7 @@ def expance(etat, p, n):
                         etat.get_cout()+1
                     ))
             else:
-                if regle(etat, n, -mEmbarque, -cEmbarque):
+                if rule(etat, n, -mEmbarque, -cEmbarque):
                     result.append(Etat(
                         etat.get_nbMg()-mEmbarque,
                         etat.get_nbCg()-cEmbarque,
@@ -38,6 +41,8 @@ def expance(etat, p, n):
 
     return result
 
+# solution prend en paramètre l'état finale trouver par l'algo. Il retournera un liste de tous les parents de la solution. (La racine à la variable parent def à None)
+
 
 def solution(etat):
     soluce = []
@@ -47,6 +52,8 @@ def solution(etat):
         etatC = etatC.get_parent()
         soluce.append(etatC)
     return soluce
+
+# Application de l'algorithme graph-Search
 
 
 def graph_Search(etat_Initiale, p, n):
@@ -75,10 +82,9 @@ def main():
     n = int(input("Veillez renseigner le nombre n de missionnaire à faire traverser : "))
     p = int(input(
         "Veillez renseigner le nombre maximal de personne pouvant monter sur le bateau (au mininimum 2) : "))
-    if (p < 2):
-        print("veillez rentrer une valeur superieur à 2")
+    if (p < 2 or n < 3):
+        print("veillez rentrer une valeur correcte.")
     else:
-        print(str(p))
         solution = graph_Search(Etat(n, n, True, None, 0), p, n)
         if (solution != None):
             solution.reverse()
