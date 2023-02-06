@@ -48,7 +48,7 @@ def solution(etat):
     soluce = []
     soluce.append(etat)
     etatC = etat
-    while not etatC.noneParent():
+    while not etatC.get_parent() == None:
         etatC = etatC.get_parent()
         soluce.append(etatC)
     return soluce
@@ -59,6 +59,7 @@ def solution(etat):
 def graph_Search(etat_Initiale, p, n):
     frontiere = []
     explore = []
+    # Nous allons simuler une file, nous allons donc utiliser append qui rajoute l'objet en fin de file et l'état choisie à expancer sera celui en t^te de file (donc à la position 0)
     frontiere.append(etat_Initiale)
     etat_Final = Etat(0, 0, False, None, None)
 
@@ -73,9 +74,14 @@ def graph_Search(etat_Initiale, p, n):
             for si in S:
                 frontiere.append(si)
             explore.append(frontiere.pop(0))
+            # Supprime les états dans frontière qui sont présent dans eplorer (donc les étas déjà expancé)
             for etat in explore:
-                while etat in frontiere:
-                    frontiere.remove(etat)
+                # la fonction remove retourne une erreur lorsqu'elle ne trouve pas l'élément à supprimer dans la file. On va donc capter cette erreur pour éviter de faire "while etat in frontiere". Ce qui nous obligerais à chaque fois de parcourire la file pour s'avoir s'il y a un état correspondant à "etat".
+                while True:
+                    try:
+                        frontiere.remove(etat)
+                    except:
+                        break
 
 
 def main():
@@ -90,8 +96,8 @@ def main():
         if (solution != None):
             solution.reverse()
             for etat in solution:
-                print("etat solution:", str(etat.get_nbMg()), str(
-                    etat.get_nbCg()), ("droite ", "gauche ")[etat.get_boatPosition()], str(etat.get_cout()))
+                print("etat solution:", str(etat.get_nbMg()), "M", str(
+                    etat.get_nbCg()), "C", ("droite ", "gauche ")[etat.get_boatPosition()], str(etat.get_cout()))
         else:
             print("Aucune solution trouvé")
 

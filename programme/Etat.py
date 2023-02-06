@@ -24,12 +24,10 @@ class Etat:
     def get_cout(self):
         return self.cout
 
+    # __eq__ (méthode "dunder/magique") permet de redéfinir la fonction ==. Cela nous sera utile pour vérifie si 2 états sont égaux. (fonctionne avec .remove() pour la comparaison d'état)
+    # il est possible de redéfinir pour >, <, ... mais inutile pour notre cas.
+
     def __eq__(self, other):
+        # on vérifie que les 2 objets sont de la même classes.
         if isinstance(other, Etat):
             return self.nbCg == other.nbCg and self.nbMg == other.nbMg and self.boatPosition == other.boatPosition
-        else:
-            super()
-
-    def noneParent(self):
-        super()
-        return self.parent == None
