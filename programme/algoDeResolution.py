@@ -79,7 +79,8 @@ def graph_Search(etat_Initiale, p, n):
 
 
 def main():
-    n = int(input("Veillez renseigner le nombre n de missionnaire à faire traverser : "))
+    n = int(input(
+        "Veillez renseigner le nombre n de missionnaires|cannibale à faires traverser (minimum 3): "))
     p = int(input(
         "Veillez renseigner le nombre maximal de personne pouvant monter sur le bateau (au mininimum 2) : "))
     if (p < 2 or n < 3):
