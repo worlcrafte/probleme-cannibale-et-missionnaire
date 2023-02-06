@@ -7,7 +7,7 @@ def rule(etat, n, ajout, ajout2):
     if 0 <= etat.get_nbMg()+ajout <= n and 0 <= etat.get_nbCg()+ajout2 <= n:
         return ((((etat.get_nbMg() + ajout) >= (etat.get_nbCg() + ajout2)) or
                  (etat.get_nbMg()+ajout) == 0) and
-                (((n-(etat.get_nbMg()+ajout)) <= 0 or
+                (((n-(etat.get_nbMg()+ajout)) == 0 or
                   ((n-(etat.get_nbMg()+ajout)) >= (n-(etat.get_nbCg()+ajout2))))))
     else:
         return False
