@@ -48,7 +48,7 @@
 
 \lstset{style=mystyle}
 
-\title{Compte rendu : Mercenaire et Cannibale}
+\title{Compte rendu : Missionnaire et Cannibale}
 \author{Flandin Léo}
 
 \begin{document}
@@ -56,47 +56,59 @@
 \tableofcontents
 
 \mainmatter
+
+\chapter{Introduction}
+Ce projet est disponible sur github au lien suivant (latex et python) : \url{https://github.com/worlcrafte/probleme-cannibale-et-missionnaire} .
+Dans cette revue, nous allons nous pencher sur le problème jouet des missionnaires et des cannibales généralisé à n (avec n superieur ou égale à 3); où n est le nombre de cannibales et de missionnaires. Notre objectif sera de sélectionner un algorithme de recherche permettant trouver le chemin de coût minimal pour ammener tous les missionnaires et les cannibales de l'autre côté de la rive sans qu'aucun missionnaire ne soit tué lors de la traversé. En effet pour résoudre ce problème on comme conditions les suivantes :
+\begin{itemize}
+    \item il ne faut jamais qu'il y ait plus de cannibales que de missionnaire
+    \item la barque ne peut traversé qu'avec p personnes au maximum (avec p superieur ou égale à 2).
+\end{itemize}
 \chapter{Étude théorique du cas générale}
 
 \section{Étude de l'environnement}
-
+Le problème des missionnaire et des cannibales est un environnement pleinement observable. On a les informations sur le nombre de missionnaire, de cannibales et la position du bateau. Notre agent n'a donc pas besoin d'anticiper ce qui va se passer ensuite son action. Nous serons sur l'utilisation d'un agent simple. L'environnement est déterministe: il n'est pas probable qu'il y ait une faible probabilité qu'une personne tombe à l'eau. A chauqe fois que l'on réalisera une traversé, nous serons limiter sur nos choix en fonction de l'état courant et aura un impacte sur le choix de l'état suivant en fonction du nombre de personnes sur les rives. Nous sommes donc dans un environnement Stochastique et statique car l'environnement ne change pas entre le moment où nous recevons le percept et celui où nous agissons. Enfin nous connaissons l'effet de chacune de nos actions, nous sommes donc sur un environnement connu.
 
 \section{Descrition d'un état}
-Ce projet est disponible sur github au lien suivant : \url{https://github.com/worlcrafte/probleme-cannibale-et-missionnaire} .
-Dans cette revue, nous allons nous pencher sur le problème des mercenaires et des cannibales généralisé à n; où n est le nombre de cannibales et de mercenaires. Notre objectif sera de trouver le chemin de coût minimal pour ammener tous les mercenaires et cannibales de l'autre côté de la rive tout en respectant les contions du problème. Pour cela, nous allons commencer par décrire un état. Un état sera défini par les 3 composantes suivantes:
+Pour cela, nous allons commencer par décrire un état. Un état sera défini par les 3 composantes suivantes:
 \begin{itemize}
     \item le nombre de merceniares à gauche : nbMg
     \item le nombre de cannibales à gauche : nbCg
     \item la position du bateau.
 \end{itemize}
-Nous n'avons pas besoins de stocké l'information sur le nombre de mercenaires ou de cannibales à droite celle-ci pouvant être facilement obtenu : n-nbMg pour le nombre de mercenaire à droite et n-nbCg pour les cannibales. Puis nous devons définir l'état initiale et l'état final. L'état initiale est définie comme suit : nbCg=n, nbMg=n et la barque est sur la rive gauche. Enfin l'état final: nbCg=0, nbMg=0 et la barque et sur la rive droite. Dans ce problème nous définiront une action comme étant la suivante: au moins une personne à traversé la rive. Notre fonction de coût sera basé sur l'action. C'est à dire, à chaque fois que la barque change de rive on ajoute 1 au coût.
+Nous n'avons pas besoins de stocké l'information sur le nombre de missionnaire ou de cannibales à droite celle-ci pouvant être facilement obtenu : n-nbMg pour le nombre de missionnaire à droite et n-nbCg pour les cannibales. Puis nous devons définir l'état initiale et l'état final. L'état initiale est définie comme suit : nbCg=n, nbMg=n et la barque est sur la rive gauche. Enfin l'état final: nbCg=0, nbMg=0 et la barque et sur la rive droite. Dans ce problème nous définiront une action comme étant la suivante: Quand la barque est à gauche: on la fait passer à droite avec au moins 1 ou2 ou ... p personnes à l'interieur.Quand la barque est à droite: on la fait passer à gauche avec au moins 1 ou2 ou ... p personnes à l'interieur. Un action est réalisé uniquement si les contraintes sur les états son respecté. Notre fonction de coût sera basé sur l'action. C'est à dire, à chaque fois que la barque change de rive on ajoute 1 au coût.
 \section{Nombre d'état maximum}
-Nous nous intéressons maintenant au nombre d'état maximale que nous pouvons avoir pour savoir si c'est raisonnable de le représenter dans la mémoire. En respectant les règles défini on peut obtenir les états suivant si on ne prend pas compte de la position du bateau :
+Nous nous intéressons maintenant au nombre d'état maximale que nous pouvons avoir pour savoir si c'est raisonnable de le représenter dans la mémoire. En respectant les règles défini on peut obtenir les états suivant si on ne prend pas compte de la position du bateau et que nous avons n missionnaire et n cannibales (nbMg,nbCg) : \\
 \begin{tabular}{|l|c|r|c|l|c|r|}
     \hline
-    (0,0)        & (0,1) & (0,2) & (0,3) & \dots & (0,n) \\
+    (0,0)          & (0,1) & (0,2)          & (0,3) & \dots & (0,n) \\
     \hline
-    (1,0)        &
-    (1,1)        &
-    \sout{(1,2)} &
-    \sout{(1,3)} & \dots &
-    \sout{(1,n)}                                         \\
+    \sout{(1,0)}   &
+    (1,1)          &
+    \sout{(1,2)}   &
+    \sout{(1,3)}   & \dots &
+    \sout{(1,n)}                                                    \\
     \hline
-    (2,0)        &
-    \sout{(2,1)} &
-    (2,2)        &
-    \sout{(2,3)} & \dots &
-    \sout{(2,n)}                                         \\
+    \sout{(2,0)}   &
+    \sout{(2,1)}   &
+    (2,2)          &
+    \sout{(2,3)}   & \dots &
+    \sout{(2,n)}                                                    \\
     \hline
-    \dots        & \dots & \dots & \dots & \dots & \dots \\
+    \dots          & \dots & \dots          & \dots & \dots & \dots \\
     \hline
-    (n,0)        &
-    \sout{(n,1)} &
-    \sout{(n,2)} &
-    \sout{(n,3)} & \dots & (n,n)                         \\
+    \sout{(n-1,0)} &
+    \sout{(n-1,1)} &
+    \sout{(n-1,2)} &
+    \sout{(n-1,3)} & \dots & \sout{(n-1,n)}                         \\
     \hline
-\end{tabular}
-Nous aurons donc au maximum $(3n+1)\times2$ états (la ligne de (0,1) à (0,n) avec n états + la colone de (1,0) à (n,0) avec n états + la diagonale de (1,1) à (n,n) avec n états + l'état (0,0)).On réalise $\times 2$ car l'état peut être soit avec la barque à gauche, soit avec celle-ci à droite. Ce résultat n'est valable que pour cette configuration car le nombre de mercenaires est égale au nombre de cannibales. Sinon nous pourrions avoir plus d'état.
+    (n,0)          &
+    (n,1)          &
+    (n,2)          &
+    (n,3)          & \dots & (n,n)                                  \\
+    \hline
+\end{tabular} \\
+Nous aurons donc au maximum $(3n+2)\times2$ états possibles.Nous réalisons $\times 2$ car l'état peut être soit avec la barque à gauche, soit avec celle-ci à droite. Ce résultat n'est valable que pour cette configuration car le nombre de missionnaire est égale au nombre de cannibales. Sinon nous pourrions avoir plus d'état.
 \section{Réponse au question 5,6 et 7 du I}
 La partie qui suit sera la réponse au question 5,6 et 7 du 1 du document. \\
 5) \\
@@ -109,7 +121,7 @@ A traver les différentes informations ques nous avons rassemblé ci-dessus, nou
 
 \chapter{Étude expérimentale des performance de l'algorithme}
 \section{étude sur le nombre de personne maximale sur la barque}
-On pourras remarquer que pour un capacité maximum de 4 personnes sur la barque, nous trouverons toujours une solution. En effet, nous pouvons amener 2 mercenaires et 2 cannibales de l'autre côté de la rive puis n'en ramener que 1 de chaque. Ce qui assure de tours trouver une solution lorsque le nombre de mercenaire et de cannibale à faire passer sont égaux. De plus, selon Martin Gardner, lorsque que nous avons le même nombre de mercenaire et de cannibale à faire passer, et une capacité maximale de la barque égale à 4, le coût minimal pour trouver la solution est de 2*n-3.
+On pourras remarquer que pour un capacité maximum de 4 personnes sur la barque, nous trouverons toujours une solution. En effet, nous pouvons amener 2 missionnaire et 2 cannibales de l'autre côté de la rive puis n'en ramener que 1 de chaque. Ce qui assure de tours trouver une solution lorsque le nombre de missionnaire et de cannibale à faire passer sont égaux. De plus, selon Martin Gardner, lorsque que nous avons le même nombre de missionnaire et de cannibale à faire passer, et une capacité maximale de la barque égale à 4, le coût minimal pour trouver la solution est de 2*n-3.
 \begin{table}[!ht]
     \caption{Tableau de l'étude des performance de l'algorithme sur le temps pour un p fixé à 4. }
     \rowcolors{1}{}{lightgray}
@@ -267,7 +279,7 @@ Pour poursuivre ce travail nous pouvons maintenant se poser la question cette fo
 \begin{lstlisting}[language=Python, caption=Python example]
     from Etat import Etat
 
-    # regle permet de verifier que l'etat calculer respecte bien les regles etablis : qu'il n'y ai pas plus de Canibale que de mercenaire sur un cote de la rive (sauf s'il n'y a aucun mercenaire alors il n'y a aucun risque pour eux)
+    # regle permet de verifier que l'etat calculer respecte bien les regles etablis : qu'il n'y ai pas plus de Canibale que de missionnaire sur un cote de la rive (sauf s'il n'y a aucun missionnaire alors il n'y a aucun risque pour eux)
     
     
     def rule(etat, n, ajout, ajout2):
