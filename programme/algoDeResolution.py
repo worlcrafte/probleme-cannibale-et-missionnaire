@@ -1,4 +1,5 @@
 from Etat import Etat
+import time
 
 # regle permet de verifier que l'état calculer respecte bien les règles établis : qu'il n'y ai pas plus de Canibale que de mercenaire sur un côté de la rive (sauf s'il n'y a aucun mercenaire alors il n'y a aucun risque pour eux)
 
@@ -89,6 +90,7 @@ def main():
         "Veillez renseigner le nombre n de missionnaires|cannibale à faires traverser (minimum 3): "))
     p = int(input(
         "Veillez renseigner le nombre maximal de personne pouvant monter sur le bateau (au mininimum 2) : "))
+    tic = time.perf_counter()
     if (p < 2 or n < 3):
         print("veillez rentrer une valeur correcte.")
     else:
@@ -100,6 +102,8 @@ def main():
                     etat.get_nbCg()), "C", ("droite ", "gauche ")[etat.get_boatPosition()], str(etat.get_cout()))
         else:
             print("Aucune solution trouvé")
+        toc = time.perf_counter()
+        print(f"le programme c'est réaliser en {toc-tic:0.4f} secondes")
 
 
 main()
