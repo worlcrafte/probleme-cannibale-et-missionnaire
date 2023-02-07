@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  7 FEB 2023 09:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  7 FEB 2023 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,19 +616,19 @@ l.58 \mainmatter
 
 ]
 Chapitre 1.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 61.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 65.
 (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.96 \section
-             {Réponse au question 5,6 et 7 du I} [1
+l.100 \section
+              {Réponse au question 5,6 et 7 du I} [1
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 97--103
+Underfull \hbox (badness 10000) in paragraph at lines 101--107
 
  []
 
@@ -636,10 +636,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--103
 Chapitre 2.
 
 Package tabularx Warning: X Columns too narrow (table too wide)
-(tabularx)                 on input line 215.
+(tabularx)                 on input line 219.
 
 
-Overfull \hbox (34.82584pt too wide) in alignment at lines 215--215
+Overfull \hbox (34.82584pt too wide) in alignment at lines 219--219
 [][][][][][][][][] 
  []
 
@@ -659,25 +659,25 @@ Annexe A.
 (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 225.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 229.
  [7
 
 ] [8] [9] [10] [11] (compte_rendu.aux)
 Package rerunfilecheck Info: File `compte_rendu.out' has not changed.
-(rerunfilecheck)             Checksum: 5216F9F21DD78E8FC69C03D6C32BC99D;2485.
+(rerunfilecheck)             Checksum: BA71C41A28029EAC34EAE238D9FACF89;2669.
  ) 
 Here is how much of TeX's memory you used:
- 16628 strings out of 475281
- 264704 string characters out of 2774065
- 1280183 words of memory out of 3000000
- 37685 multiletter control sequences out of 15000+600000
+ 16630 strings out of 475281
+ 264728 string characters out of 2774065
+ 1280184 words of memory out of 3000000
+ 37686 multiletter control sequences out of 15000+600000
  532216 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,77p,1615b,2175s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,12n,77p,1830b,2175s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on compte_rendu.pdf (13 pages, 290861 bytes).
+Output written on compte_rendu.pdf (13 pages, 292168 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 165 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 166 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
