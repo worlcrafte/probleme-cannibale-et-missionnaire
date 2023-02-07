@@ -12,11 +12,17 @@
 \usepackage{amssymb}
 \usepackage{indentfirst}
 \usepackage{listings}
+\usepackage[table]{xcolor}
 \usepackage{xcolor}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{tabularx, array, caption}
+
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{lightgray}{gray}{0.9}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -97,6 +103,116 @@ Si nous nous se basons sur le fait que n=3 et p=2 (où p représente le nombre m
 A traver les différentes informations ques nous avons rassemblé ci-dessus, nous pouvons choisir quel type d'algorithme serait intéressant pour notre problème. Nous avons dit plus tôt qu'il nous fallait garder les ancient états déjà expancé en mémoire. Nous pouvons donc oublier Three-Search. De plus notre fonction de coût est de 1 par passage. On doit donc sélectionner l'algorithme de graph-search. Nous voulons maintenant choisir quelle stratégie choisir pour trouver la solution optimal. Nous avons défini notre fonction de coût de +1 pour chaque passage la barque entre chaque rive. Nous utilisons donc des coûts utiformes. Cela rend donc inutile la stratégie de coût uniforme (cela revient à faire une stratégie en largeur). Enfin on on une solution de coût minimal. Nous ne pouvons donc pas choisir la stratégie de profondeur d'abord qui ne donne pas une solution de coût minimal. (par exemple si n=3 et p=4 nous pourrions avoir : (3,3,G)$\rightarrow$ (0,2,D) $\rightarrow$ (3,2,G) $\rightarrow$ (0,1,D) $\rightarrow$ (3,1,G) $\rightarrow$ (0,0,D). Ce qui retourne une solution avec un coût de 5. Alors que la solution optimal à un coût de 3 : (3,3,G)$\rightarrow$(3,0,D)$\rightarrow$(3,1,G)$\rightarrow$(0,0,D)). Nous devons donc choisir l'algorithme Graph-Search avec une stratégie de parcourt en largeur. Celui-ci est optimale dans notre situation et comme complexité O($b^d$) où b est le facteur de branchement et d la profondeur de la première solution.
 
 \chapter{Étude expérimentale des performance de l'algorithme}
+
+On pourras remarquer que pour un capacité maximum de 4 personnes sur la barque, nous trouverons toujours une solution. En effet, nous pouvons amener 2 mercenaires et 2 cannibales de l'autre côté de la rive puis n'en ramener que 1 de chaque. Ce qui assure de tours trouver une solution lorsque le nombre de mercenaire et de cannibale à faire passer sont égaux. De plus, selon Martin Gardner, lorsque que nous avons le même nombre de mercenaire et de cannibale à faire passer, et une capacité maximale de la barque égale à 4, le coût minimal pour trouver la solution est de 2*n-3.
+\begin{table}[!ht]
+    \rowcolors{1}{}{lightgray}
+    \renewcommand\arraystretch{1.2}
+    \begin{tabularx}{\linewidth}{|c|c|c|c|X|c|c|c|c|}
+        \cline{1-4}\cline{6-9}
+        {\textbf{n}} & {\textbf{p}} & {\textbf{coût}} & {\textbf{temps (en seconde)}} &  & {\textbf{n}} & {\textbf{p}} & {\textbf{coût}} & {\textbf{temps (en seconde)}} \\
+        \cline{1-4}\cline{6-9}
+
+
+        5            & 4            & 7               & 0.0011                        &  &
+
+        10           & 4            & 17              & 0.0055                                                                                                           \\
+
+        15           & 4            & 27              & 0.0100                        &  &
+
+        20           & 4            & 37              & 0.0162                                                                                                           \\
+
+        25           & 4            & 47              & 0.0141                        &  &
+
+        30           & 4            & 57              & 0.0152                                                                                                           \\
+
+        35           & 4            & 67              & 0.0193                        &  &
+
+        40           & 4            & 77              & 0.0274                                                                                                           \\
+
+        45           & 4            & 87              & 0.0318                        &  &
+
+        50           & 4            & 97              & 0.0364                                                                                                           \\
+
+        55           & 4            & 107             & 0.0422                        &  &
+
+        60           & 4            & 117             & 0.0833                                                                                                           \\
+
+        65           & 4            & 127             & 0.0625                        &  &
+
+        70           & 4            & 137             & 0.0619                                                                                                           \\
+
+        75           & 4            & 147             & 0.0775                        &  &
+
+        80           & 4            & 157             & 0.0825                                                                                                           \\
+
+        85           & 4            & 167             & 0.0843                        &  &
+
+        90           & 4            & 177             & 0.0866                                                                                                           \\
+
+        95           & 4            & 187             & 0.1112                        &  &
+
+        100          & 4            & 197             & 0.1216                                                                                                           \\
+
+        105          & 4            & 207             & 0.1383                        &  &
+
+        110          & 4            & 217             & 0.1233                                                                                                           \\
+
+        115          & 4            & 227             & 0.1315                        &  &
+
+        120          & 4            & 237             & 0.1400                                                                                                           \\
+
+        125          & 4            & 247             & 0.1521                        &  &
+
+        130          & 4            & 257             & 0.1780                                                                                                           \\
+
+        135          & 4            & 267             & 0.1776                        &  &
+
+        140          & 4            & 277             & 0.1836                                                                                                           \\
+
+        145          & 4            & 287             & 0.1979                        &  &
+
+        150          & 4            & 297             & 0.2137                                                                                                           \\
+
+        155          & 4            & 307             & 0.2315                        &  &
+
+        160          & 4            & 317             & 0.2401                                                                                                           \\
+
+        165          & 4            & 327             & 0.2483                        &  &
+
+        170          & 4            & 337             & 0.2847                                                                                                           \\
+
+        175          & 4            & 347             & 0.2779                        &  &
+
+        180          & 4            & 357             & 0.2966                                                                                                           \\
+
+        185          & 4            & 367             & 0.3102                        &  &
+
+        190          & 4            & 377             & 0.3247                                                                                                           \\
+
+        195          & 4            & 387             & 0.3399                        &  &
+
+        200          & 4            & 397             & 0.3649                                                                                                           \\
+
+        205          & 4            & 407             & 0.3779                        &  &
+
+        210          & 4            & 417             & 0.3928                                                                                                           \\
+
+        215          & 4            & 427             & 0.4072                        &  &
+
+        220          & 4            & 437             & 0.4255                                                                                                           \\
+
+        225          & 4            & 447             & 0.4617                        &  &
+
+        230          & 4            & 457             & 0.4638                                                                                                           \\
+
+        235          & 4            & 467             & 0.4860                        &  &
+
+        240          & 4            & 477             & 0.5105                                                                                                           \\
+        \cline{1-4}\cline{6-9}
+    \end{tabularx}
+\end{table}
+
 
 \chapter{Proposition d'extensions pour poursuivre ce travail}
 
