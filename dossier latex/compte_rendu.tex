@@ -3,8 +3,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
-\usepackage[normalem]{ ulem }
 \usepackage{soul}
+\usepackage[normalem]{ ulem }
+\usepackage{hyperref}
+\usepackage{blindtext}
 \usepackage{pifont}
 \usepackage{graphicx}
 \usepackage{float}
@@ -52,12 +54,11 @@
 \begin{document}
 \maketitle
 \tableofcontents
-\frontmatter
-
 
 \mainmatter
 \chapter{Étude théorique du cas générale}
 \section{Descrition d'un état}
+Ce projet est disponible sur github au lien suivant : \url{https://github.com/worlcrafte/probleme-cannibale-et-missionnaire} .
 Dans cette revue, nous allons nous pencher sur le problème des mercenaires et des cannibales généralisé à n; où n est le nombre de cannibales et de mercenaires. Notre objectif sera de trouver le chemin de coût minimal pour ammener tous les mercenaires et cannibales de l'autre côté de la rive tout en respectant les contions du problème. Pour cela, nous allons commencer par décrire un état. Un état sera défini par les 3 composantes suivantes:
 \begin{itemize}
     \item le nombre de merceniares à gauche : nbMg
@@ -216,7 +217,7 @@ On pourras remarquer que pour un capacité maximum de 4 personnes sur la barque,
 Nous pouvons donc observé à travers ce tableau le temps réaliser pour trouvé la solution où n est le nombre de mercecnaire ou cannibales et p la capacité maximale de la barque.
 
 \chapter{Proposition d'extensions pour poursuivre ce travail}
-
+Pour poursuivre ce travail nous pouvons maintenant se poser la question cette fois-ci avec nbMg différent de nbCg et nbMg superieur ou égale à nbCg. De plus nommes aussi en droit de se demander s'il existe un algorithme plus performant ou non pour réaliser ce problème jouet lorsque nbCg != nbMg.
 
 \appendix
 \chapter{Annexe}
