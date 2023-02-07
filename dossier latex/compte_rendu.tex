@@ -1,5 +1,5 @@
 
-\documentclass[a4paper, 12pt, french,oneside]{book}
+\documentclass[a4paper, 12pt, french, oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
@@ -19,12 +19,20 @@
 \usepackage{lmodern}
 \usepackage{geometry}
 \usepackage{tabularx, array, caption}
+\usepackage{fancyhdr} 
+\usepackage{lastpage}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \definecolor{lightgray}{gray}{0.9}
+
+\fancypagestyle{plain}{%
+\fancyhf{}
+\cfoot{\thepage\,$|$\,\pageref{LastPage}}}
+\pagestyle{plain}
+
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -50,8 +58,8 @@
 
 \title{Compte rendu : Missionnaire et Cannibale}
 \author{Flandin Léo}
-
 \begin{document}
+
 \maketitle
 \tableofcontents
 
@@ -78,7 +86,7 @@ Pour cela, nous allons commencer par décrire un état. Un état sera défini pa
     \item le nombre de cannibales à gauche : nbCg
     \item la position du bateau.
 \end{itemize}
-Nous n'avons pas besoins de stocker l'information sur le nombre de missionnaires ou de cannibales à droite. Celle-ci pouvant être facilement obtenu : n-nbMg pour le nombre de missionnaires à droite et n-nbCg pour les cannibales. Puis nous devons définir l'état initial et l'état final. \\
+Nous n'avons pas besoin de stocker l'information sur le nombre de missionnaires ou de cannibales à droite. Celle-ci pouvant être facilement obtenu : n-nbMg pour le nombre de missionnaires à droite et n-nbCg pour les cannibales. Puis nous devons définir l'état initial et l'état final. \\
 L'état initial est défini comme suit : nbCg=n, nbMg=n et la barque est sur la rive gauche. Enfin l'état final : nbCg=0, nbMg=0 et la barque est sur la rive droite. Dans ce problème nous définiront une action comme étant la suivante: Quand la barque est à gauche: on la fait passer à droite avec au moins 1 ou 2 ou ... p personnes à l'intérieur. Quand la barque est à droite : on la fait passer à gauche avec au moins 1 ou 2 ou ... p personnes à l'intérieur. Une action est réalisée uniquement si les contraintes sur les états sont respectées. Notre fonction de coût sera basée sur l'action. C'est-à-dire, à chaque fois que la barque change de rive, on ajoute 1 au coût.
 \section{Nombre d'état maximum}
 Nous nous intéressons maintenant au nombre d'état maximal que nous pouvons avoir pour savoir si c'est raisonnable de le représenter dans la mémoire. En respectant les règles définies, on peut obtenir les états suivants si on ne prend pas compte de la position du bateau et que nous avons n missionnaire et n cannibales (nbMg,nbCg) : \\
@@ -119,7 +127,7 @@ Si nous nous  basons sur le fait que n=3 et p=2 (où p représente le nombre max
 (3M,3C,G) $\leftarrow$ (3M,1C,D)$\rightarrow$(3M,2C,G). Si on choisit l'état (3M,3C,G) on revient à l'état initial ce qui n'est pas intéressant. Si on choisit l'autre état, il faudra l'expanser pour pouvoir continuer la construction de notre arbre. Nous pouvons donc en conclure qu'il faut obligatoirement garder en mémoire les états déjà expansés pour ne pas se retrouver à expanser un état à l'infini.\\
 6) Si on reprend notre exemple précédent avec n=3 et p=2 on aurait, par exemple l'état suivant: (3M,2C,D) $\rightarrow$ (3M,3C,G). Ici le seul état pouvant être choisi et le retour à l'état initiale.\\
 7)Il n'existe pas d'action qui ne mène vers aucun n'état. Dans le pire des cas on devra retourner dans un état précédant comme dans le 6). \\
-\section{Choix de l'algorithme de recherche et de la stratégie abordé}
+\section{Choix de l'algorithme de recherche et de la stratégie abordée}
 À travers les différentes informations ques nous avons rassemblé ci-dessus, nous pouvons choisir quel type d'algorithme serait intéressant pour notre problème. Dans un premier temps, nous pouvons déjà affirmer que nous sommes sur une stratégie de recherche non informée. Nous n'exploitons pas d'informations supplémentaires pour utiliser une fonction d'évaluation. De plus, nous avons dit plutôt qu'il nous fallait garder les anciens états déjà expansés en mémoire. Nous pouvons donc oublier Three-Search. De plus, notre fonction de coût est de 1 par passage. On doit donc sélectionner l'algorithme de graph-search. Nous voulons maintenant choisir quelle stratégie choisir pour trouver la solution optimale. Nous avons défini notre fonction de coût de +1 pour chaque passage la barque entre chaque rive. Nous utilisons donc des coûts uniformes. Cela rend donc inutile la stratégie de coût uniforme (cela revient à faire une stratégie en largeur). Enfin, nous voulons une solution de coût minimal. Nous ne pouvons donc pas choisir la stratégie de profondeur d'abord qui ne donne pas une solution de coût minimal.(par exemple si n=3 et p=4 nous pourrions avoir : (3,3,G)$\rightarrow$ (0,2,D) $\rightarrow$ (3,2,G) $\rightarrow$ (0,1,D) $\rightarrow$ (3,1,G) $\rightarrow$ (0,0,D). Ce qui retourne une solution avec un coût de 5. Alors que la solution optimal à un coût de 3 : (3,3,G)$\rightarrow$(3,0,D)$\rightarrow$(3,1,G)$\rightarrow$(0,0,D)). Nous devons donc choisir l'algorithme Graph-Search avec une stratégie de parcours en largeur. Celui-ci est optimal dans notre situation et comme complexité O($b^d$) où b est le facteur de branchement et d la profondeur de la première solution. Nous pouvons aussi nous demander si la méthode de recher en "escalade" est possible : L’escalade est une méthode de recherche en profondeur dans laquelle on introduit une fonction heuristique pour choisir à chaque étape le noeud à générer, au lieu de générer un noeud en prenant une règle de production au hasard. Or celui-ci, maldrès qu'il soit très puissant, n'assure pas une solution optimale.
 
 \chapter{Étude expérimentale des performances de l'algorithme}
@@ -240,7 +248,7 @@ Pour poursuivre ce travail, nous pouvons maintenant se poser la question cette f
 Enfin, il pourrait être aussi intéressant de réaliser un algorithme de recherche en modifiant légèrement l'environnement de la manière suivante : une personne sur la barque a une faible chance de tomber dans l'eau. Et donc, de faire en sorte de prendre en considération qu'au moins une personne puisse tomber tout en respectant les contraintes imposées.
 
 \appendix
-\chapter{Annexe}
+\chapter{Annexes}
 \section{Etat.py}
 \begin{lstlisting}[language=Python, caption=Python example] 
 
