@@ -103,9 +103,10 @@ Si nous nous se basons sur le fait que n=3 et p=2 (où p représente le nombre m
 A traver les différentes informations ques nous avons rassemblé ci-dessus, nous pouvons choisir quel type d'algorithme serait intéressant pour notre problème. Nous avons dit plus tôt qu'il nous fallait garder les ancient états déjà expancé en mémoire. Nous pouvons donc oublier Three-Search. De plus notre fonction de coût est de 1 par passage. On doit donc sélectionner l'algorithme de graph-search. Nous voulons maintenant choisir quelle stratégie choisir pour trouver la solution optimal. Nous avons défini notre fonction de coût de +1 pour chaque passage la barque entre chaque rive. Nous utilisons donc des coûts utiformes. Cela rend donc inutile la stratégie de coût uniforme (cela revient à faire une stratégie en largeur). Enfin on on une solution de coût minimal. Nous ne pouvons donc pas choisir la stratégie de profondeur d'abord qui ne donne pas une solution de coût minimal. (par exemple si n=3 et p=4 nous pourrions avoir : (3,3,G)$\rightarrow$ (0,2,D) $\rightarrow$ (3,2,G) $\rightarrow$ (0,1,D) $\rightarrow$ (3,1,G) $\rightarrow$ (0,0,D). Ce qui retourne une solution avec un coût de 5. Alors que la solution optimal à un coût de 3 : (3,3,G)$\rightarrow$(3,0,D)$\rightarrow$(3,1,G)$\rightarrow$(0,0,D)). Nous devons donc choisir l'algorithme Graph-Search avec une stratégie de parcourt en largeur. Celui-ci est optimale dans notre situation et comme complexité O($b^d$) où b est le facteur de branchement et d la profondeur de la première solution.
 
 \chapter{Étude expérimentale des performance de l'algorithme}
-
+\section{étude sur le nombre de personne maximale sur la barque}
 On pourras remarquer que pour un capacité maximum de 4 personnes sur la barque, nous trouverons toujours une solution. En effet, nous pouvons amener 2 mercenaires et 2 cannibales de l'autre côté de la rive puis n'en ramener que 1 de chaque. Ce qui assure de tours trouver une solution lorsque le nombre de mercenaire et de cannibale à faire passer sont égaux. De plus, selon Martin Gardner, lorsque que nous avons le même nombre de mercenaire et de cannibale à faire passer, et une capacité maximale de la barque égale à 4, le coût minimal pour trouver la solution est de 2*n-3.
 \begin{table}[!ht]
+    \caption{Tableau de l'étude des performance de l'algorithme sur le temps pour un p fixé à 4. }
     \rowcolors{1}{}{lightgray}
     \renewcommand\arraystretch{1.2}
     \begin{tabularx}{\linewidth}{|c|c|c|c|X|c|c|c|c|}
@@ -212,7 +213,7 @@ On pourras remarquer que pour un capacité maximum de 4 personnes sur la barque,
         \cline{1-4}\cline{6-9}
     \end{tabularx}
 \end{table}
-
+Nous pouvons donc observé à travers ce tableau le temps réaliser pour trouvé la solution où n est le nombre de mercecnaire ou cannibales et p la capacité maximale de la barque.
 
 \chapter{Proposition d'extensions pour poursuivre ce travail}
 
