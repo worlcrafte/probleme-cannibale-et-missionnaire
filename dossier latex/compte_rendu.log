@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  7 FEB 2023 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  7 FEB 2023 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,15 +616,15 @@ l.58 \mainmatter
 
 ]
 Chapitre 1.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 61.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 62.
 (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \chapter
-             {Étude théorique du cas générale} [1
+l.69 \chapter
+             {Étude théorique du cas général} [1
 
 
 ]
@@ -632,7 +632,7 @@ Chapitre 2.
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 113--119
+Underfull \hbox (badness 10000) in paragraph at lines 116--122
 
  []
 
@@ -640,18 +640,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--119
 Chapitre 3.
 
 Package tabularx Warning: X Columns too narrow (table too wide)
-(tabularx)                 on input line 231.
+(tabularx)                 on input line 234.
 
 
-Overfull \hbox (34.82584pt too wide) in alignment at lines 231--231
+Overfull \hbox (34.82584pt too wide) in alignment at lines 234--234
 [][][][][][][][][] 
  []
 
 [5
 
 ]
-Overfull \hbox (57.4145pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 CHAPITRE 3.  �TUDE EXP�RIMENTALE DES PERFORMANCE DE L'ALGORITHME \T1/lmr/m/n/12 6
+Overfull \hbox (63.94249pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 CHAPITRE 3.  �TUDE EXP�RIMENTALE DES PERFORMANCES DE L'ALGORITHME \T1/lmr/m/n/12 6
  []
 
 [6]
@@ -663,25 +663,25 @@ Annexe A.
 (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 242.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 245.
  [8
 
 ] [9] [10] [11] [12] (compte_rendu.aux)
 Package rerunfilecheck Info: File `compte_rendu.out' has not changed.
-(rerunfilecheck)             Checksum: 2FE4BAB2B9AB5B9F34CBC3EB177E7691;2816.
+(rerunfilecheck)             Checksum: 51A5EF47CD879FB5C3F462154AB0C4C8;2836.
  ) 
 Here is how much of TeX's memory you used:
  16633 strings out of 475281
  264755 string characters out of 2774065
- 1279189 words of memory out of 3000000
+ 1279183 words of memory out of 3000000
  37687 multiletter control sequences out of 15000+600000
  532216 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,77p,1846b,2175s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,12n,77p,2255b,2175s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/leofl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on compte_rendu.pdf (14 pages, 296147 bytes).
+Output written on compte_rendu.pdf (14 pages, 296397 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
+ 368 PDF objects out of 1000 (max. 8388607)
  168 named destinations out of 1000 (max. 500000)
  105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
