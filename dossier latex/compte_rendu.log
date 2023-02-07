@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  7 FEB 2023 23:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.8)  7 FEB 2023 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -492,7 +492,7 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \ESO@tempdima=\dimen198
 \ESO@tempdimb=\dimen199
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 83.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 80.
  (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -502,27 +502,27 @@ File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 ) (compte_rendu.aux)
 \openout1 = `compte_rendu.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Info: Redefining \degres on input line 83.
-LaTeX Info: Redefining \up on input line 83.
-Package hyperref Info: Link coloring OFF on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Info: Redefining \degres on input line 80.
+LaTeX Info: Redefining \up on input line 80.
+Package hyperref Info: Link coloring OFF on input line 80.
  (compte_rendu.out) (compte_rendu.out)
 \@outlinefile=\write3
 \openout3 = `compte_rendu.out'.
@@ -586,41 +586,41 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 83.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 92.
+(lastpage)             ! on input line 80.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 84.
 (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 92.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 84.
  (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 92.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 84.
  (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 92.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 84.
  (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 92.
+(Font)              <14.4> on input line 84.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 92.
+(Font)              <10> on input line 84.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 92.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
+(Font)              <7> on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
  (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
  (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <images/logo-buevry.png, id=55, 343.2825pt x 136.51pt>
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 92.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 84.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [1
 
@@ -640,28 +640,28 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94 \mainmatter
+l.86 \mainmatter
                 
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 94.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 86.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [1
 
 ]
 Chapitre 1.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 98.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 90.
 (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 \chapter
-              {Étude théorique du cas général}
+l.97 \chapter
+             {Étude théorique du cas général}
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 105.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 97.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [1
 
@@ -670,42 +670,42 @@ Package pdftex.def Info: images/logo-buevry.png  used on input line 105.
 Chapitre 2.
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 119.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 111.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 152--158
+Underfull \hbox (badness 10000) in paragraph at lines 144--150
 
  []
 
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 160.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 152.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
 [3]
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 161.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 153.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [4]
 Chapitre 3.
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 274.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 266.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
 [5
 
 ]
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 274.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 266.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [6]
 Chapitre 4.
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 279.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 271.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
 [7
 
@@ -714,27 +714,27 @@ Annexe A.
 (C:\Users\leofl\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 281.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 273.
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 315.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 307.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [8
 
 ]
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 355.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 347.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [9]
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 401.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 393.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [10]
 File: images/logo-buevry.png Graphic file (type png)
 <use images/logo-buevry.png>
-Package pdftex.def Info: images/logo-buevry.png  used on input line 428.
+Package pdftex.def Info: images/logo-buevry.png  used on input line 420.
 (pdftex.def)             Requested size: 142.26378pt x 56.57143pt.
  [11] 
 AED: lastpage setting LastPage
@@ -743,10 +743,10 @@ Package rerunfilecheck Info: File `compte_rendu.out' has not changed.
 (rerunfilecheck)             Checksum: 10FC0DD029C4AB7F3DD3C0E1EDB1153E;2846.
  ) 
 Here is how much of TeX's memory you used:
- 17019 strings out of 475281
- 271673 string characters out of 2774065
- 1314380 words of memory out of 3000000
- 38056 multiletter control sequences out of 15000+600000
+ 17017 strings out of 475281
+ 271638 string characters out of 2774065
+ 1314322 words of memory out of 3000000
+ 38054 multiletter control sequences out of 15000+600000
  529186 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,13n,77p,2255b,2054s stack positions out of 10000i,1000n,20000p,200000b,80000s

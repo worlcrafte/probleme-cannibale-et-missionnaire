@@ -61,31 +61,23 @@
 % \enlargethispage{2cm}
 \newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
  
-\newcommand\AtUpperLeftCorner[3]{%
-  \put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
-}
+
  
 \newcommand\AtTopCenterPage[2]{%
   \put(\LenToUnit{.5\paperwidth},\LenToUnit{\dimexpr\paperheight-#1}){\blap{\hbox to 0pt{\hss#2\hss}}}%
 }
  
  
-\newcommand\AtUpperRightCorner[3]{%
-  \put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
-}
-
 \ClearShipoutPicture
 \lstset{style=mystyle}
 \title{Compte rendu : Missionnaire et Cannibale}
 \author{Flandin Léo 20200275}
 
-
-\begin{document}
-
 \AddToShipoutPicture{%
     \AtTopCenterPage{1cm}{\includegraphics[width=5cm]{images/logo-buevry.png}}
 }
 
+\begin{document}
 
 
 \maketitle
